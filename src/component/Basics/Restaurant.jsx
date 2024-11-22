@@ -8,7 +8,7 @@ import Navbar from './Navbar';
 // All menu items are uniquely extracted - based on same names with one category
 const uniqueList = [...new Set(Menu.map((curElem) => {
     return curElem.category;
-})), "All", ]
+})), "All",]
 
 console.log(uniqueList);
 
@@ -17,21 +17,21 @@ const Restaurant = () => {
     const [menuList, setMenuList] = useState(uniqueList)
 
     const filterItem = (category) => {
-        if(category === "All") {
+        if (category === "All") {
             setMenuData(Menu);
             return;
         }
-
+        
         const updatedList = Menu.filter((curElem) => {
             return curElem.category === category
         });
-        
+
         setMenuData(updatedList);
     };
 
     return (
         <>
-            <Navbar filterItem = {filterItem} menuList = {menuList}/>
+            <Navbar filterItem={filterItem} menuList={menuList} />
             <MenuCard menuData={menuData} />
         </>
     );
