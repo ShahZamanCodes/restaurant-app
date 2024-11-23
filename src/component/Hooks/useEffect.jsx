@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 
+
+
+// How chats/numbers are shown on whatsapp tab when you receive a message
+
 const UseEffect = () => {
-    // const initialData = 10;
-    const [myNum, setMyNum] = React.useState(0);
+
+    const [myNum, setMyNum] = useState(0);
+
+    useEffect (()=> {
+        document.title = `Chats(${myNum})`;
+    });
+ 
+
     return (
         <>
             <div className="center_div">
