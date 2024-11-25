@@ -3,7 +3,7 @@ import "./style.css";
 
 
 
-// How chats/numbers are shown on whatsapp tab when you receive a message
+// How chats/numbers are shown on whatsapp tab tiltle when you receive a message
 
 const UseEffect = () => {
 
